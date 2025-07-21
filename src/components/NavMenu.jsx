@@ -1,9 +1,9 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
 
 const menuItems = [
-  { label: 'Home', path: '/' },
-  { label: 'Work', path: '/work' },
-  { label: 'About', path: '/about' },
+  { label: "Home", path: "/" },
+  { label: "Work", path: "/work" },
+  { label: "About", path: "/about" },
 ];
 
 export default function NavMenu({ isOpen, onClose }) {
@@ -12,7 +12,7 @@ export default function NavMenu({ isOpen, onClose }) {
   return (
     <div
       id="navmenu-wrapper"
-      className={`navmenu-wrapper ${isOpen ? 'visible' : ''}`}
+      className={`navmenu-wrapper ${isOpen ? "visible" : ""}`}
       aria-modal="true"
       aria-label="Navigation menu"
     >
@@ -21,10 +21,10 @@ export default function NavMenu({ isOpen, onClose }) {
           <div className="navlink-wrapper" key={i}>
             <Link
               to={item.path}
-              className={`navlink visible ${location.pathname === item.path ? 'current' : ''}`}
+              className={`navlink visible ${location.pathname === item.path ? "current" : ""}`}
               role="link"
               tabIndex={isOpen ? 0 : -1}
-              aria-current={location.pathname === item.path ? 'page' : undefined}
+              aria-current={location.pathname === item.path ? "page" : undefined}
               onClick={onClose}
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
