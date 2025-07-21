@@ -1,3 +1,5 @@
+import ReturnButton from "../components/ReturnButton";
+
 export default function AboutPage() {
   return (
     <div className="page-wrapper">
@@ -39,6 +41,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+      <ReturnButton />
     </div>
   );
 }

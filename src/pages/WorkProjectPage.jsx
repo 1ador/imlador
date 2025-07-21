@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import projects from "../data/projects";
+import ReturnButton from "../components/ReturnButton";
 
 export default function WorkProjectPage() {
     const { id } = useParams();
@@ -98,10 +99,7 @@ export default function WorkProjectPage() {
                     </figure>
                 </section>
             </div>
-
+            <ReturnButton />
         </div>
-
-
-
     );
 }
