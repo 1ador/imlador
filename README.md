@@ -1,12 +1,26 @@
-# React + Vite
+# IMLador – Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio site built with [React](https://reactjs.org/) and [Vite](https://vitejs.dev/), featuring multiple projects and smooth navigation. Deployed on GitHub Pages.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+# Clone the repo
+git clone https://github.com/1ador/imlador.git
 
-## Expanding the ESLint configuration
+cd imlador
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Install dependencies
+npm install
+
+# Run locally
+npm run dev
+
+# Clean previous gh-pages contents (optional but recommended)
+npx gh-pages-clean
+
+# Build the project
+npm run build
+
+# Deploy to gh-pages branch
+npm run deploy
