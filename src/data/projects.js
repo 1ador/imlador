@@ -1,8 +1,29 @@
-const projects = [
-  {
+const prefixPath = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+
+const processProjectImages = (projects) =>
+  projects.map((project) => {
+    const updatedImage = {
+      ...project.image
+    };
+
+    for (const key in updatedImage) {
+      if (Array.isArray(updatedImage[key])) {
+        updatedImage[key] = updatedImage[key].map((p) => prefixPath(p));
+      } else {
+        updatedImage[key] = prefixPath(updatedImage[key]);
+      }
+    }
+
+    return {
+      ...project,
+      image: updatedImage,
+    };
+  });
+
+const rawProjects = [{
     id: "near-buy",
     title: "Near-Buy",
-    description: "A web app that offers an innovation solution to the challenges of every consumers who wants to discover the best discounts, promotions and special offers available online.",
+    description: "...",
     tags: ["Javascript", "HTML", "CSS", "Firebase"],
     hasMobileView: false,
     image: {
@@ -18,7 +39,7 @@ const projects = [
   {
     id: "helpmet",
     title: "Helpmet",
-    description: "An injury-tracking web platform to help companies monitor and prevent workplace injuries.",
+    description: "...",
     tags: ["React", "Node.js", "Express", "MongoDB"],
     hasMobileView: false,
     image: {
@@ -34,7 +55,7 @@ const projects = [
   {
     id: "evalo",
     title: "Evalo",
-    description: "A mobile app that helps construction consultant companies to conduct building conditions assessment.",
+    description: "...",
     tags: ["Typescript", "Apollo", "Go", "PostgreSQL"],
     hasMobileView: true,
     image: {
@@ -55,4 +76,5 @@ const projects = [
   }
 ];
 
+const projects = processProjectImages(rawProjects);
 export default projects;
