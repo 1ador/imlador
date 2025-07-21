@@ -290,6 +290,21 @@ a:focus:before {
   overflow: hidden;
 }
 
+.heading-link {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 1rem;
+  cursor: pointer;
+  transform: translateY(-110%);
+  animation: drop-in var(--transition-length) cubic-bezier(.3, .9, .3, .9) .4s forwards;
+}
+
+.heading-link svg {
+  fill: var(--text);
+  transition: fill var(--transition-theme);
+}
+
 .heading-divider {
   background-color: var(--text);
   height: 4px;
@@ -301,9 +316,7 @@ a:focus:before {
 }
 
 h1.top-heading {
-  transform: translateY(-110%);
   margin: 0 0 0.5rem;
-  animation: drop-in var(--transition-length) cubic-bezier(.3, .9, .3, .9) .4s forwards;
 }
 
 .switch-wrapper {

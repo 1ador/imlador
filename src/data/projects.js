@@ -12,7 +12,8 @@ const projects = [
       preview: "/assets/nearbuy-preview.png",
     },
     role: "Frontend developer",
-    date: "2024"
+    date: "2024",
+    url: "https://shaka-near-buy.netlify.app/"
   },
   {
     id: "helpmet",
@@ -27,7 +28,8 @@ const projects = [
       preview: "/assets/helpmet-preview.png",
     },
     role: "Fullstack developer",
-    date: "2024"
+    date: "2024",
+    url: "https://helpmet.ca/"
   },
   {
     id: "evalo",
@@ -48,7 +50,8 @@ const projects = [
       ]
     },
     role: "Frontend developer",
-    date: "2025"
+    date: "2025",
+    url: "https://evalo.wmdd.ca/"
   }
 ];
 
