@@ -1,13 +1,12 @@
 import MenuToggleButton from "./Menu";
 import ThemeToggle from "./ThemeToggle";
+import { useNavigate } from "react-router-dom";
 
 export default function Header({ isMenuOpen, setIsMenuOpen, theme, setTheme }) {
-
-
+  const navigate = useNavigate();
   return (
-
     <header id="navbar-wrapper">
-      <div className="navbar-side">
+      <div className="navbar-side" onClick={() => navigate("/")}>
         <div className="nav-logo-wrapper" tabIndex="0" role="button" aria-label="Go to home page">
           <div className="logo-shapes" aria-hidden="true">
             <svg className="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -24,4 +23,3 @@ export default function Header({ isMenuOpen, setIsMenuOpen, theme, setTheme }) {
     </header>
   );
 }
-    
