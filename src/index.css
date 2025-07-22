@@ -316,7 +316,9 @@ a:focus:before {
 }
 
 h1.top-heading {
+  transform: translateY(-110%);
   margin: 0 0 0.5rem;
+  animation: drop-in var(--transition-length) cubic-bezier(.3,.9,.3,.9) .4s forwards;
 }
 
 .switch-wrapper {
